@@ -38,4 +38,5 @@ Connection: keep-alive, Upgrade
 Cookie: io=4LwWoaLpG7VuhSGcAAAt
 Pragma: no-cache
 Cache-Control: no-cache
-Upgrade: websocket```
+Upgrade: websocket
+```
