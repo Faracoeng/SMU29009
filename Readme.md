@@ -84,6 +84,14 @@ a=setup:active
 a=ssrc:3248660371 cname:{78aac3a2-fbc3-48f0-99b0-80d641a054f2}
 
 ```
+##### Codec ofertados na resposta
+
+ - opus à 48000 Hz, com 2 canais
+ - ISAC à 16000 Hz, com 1 canal
+ - G722/à 8000 Hz, com 1 canal
+ - PCMU à 8000 Hz
+ - PCMA à 8000 Hz
+
 ##### SDP Remoto (Oferta)
 ```
 v=0
