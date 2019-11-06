@@ -135,3 +135,11 @@ a=ssrc:509559268 msid:SW1LDGJjg94uffeKZLWXxB1NR01hwDH5vZ8M e6222780-8083-4796-86
 a=ssrc:509559268 mslabel:SW1LDGJjg94uffeKZLWXxB1NR01hwDH5vZ8M
 a=ssrc:509559268 label:e6222780-8083-4796-8695-08dcfe31308b
 ```
+
+##### Codec ofertados na Oferta
+
+ - opus à 48000 Hz, com 2 canais
+ - ISAC à 16000 Hz, com 1 canal
+ - G722/à 8000 Hz, com 1 canal
+ - PCMU à 8000 Hz
+ - PCMA à 8000 Hz
