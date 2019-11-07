@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>EasyRTC Demo: Multistream calls</title>
+        <link rel="stylesheet" type="text/css" href="/easyrtc/easyrtc.css" />
+        <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="/easyrtc/easyrtc.js"></script>
+        <script type="text/javascript" src="/easyrtc/labs/desktop_capture_no_iframe_version.js"></script>
+        <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/tawk-desktop-capture/bemabaogbdfpbkkganibcmhbgjogabfj">
+      </head>
+      <body>
+            <div id="demoContainer">
+              <div id="connectControls">
+                <button id="connectButton" onclick="connect()">Connect</button>
+                <button id="hangupButton" disabled="disabled" onclick="hangup()">Hangup</button>
+                <button id="installPluginButton">Install plugin</button>
+                <div id="pluginstatus"></div>
+                <div id="iam">Not yet connected...</div>
+                <H3> Video sources</h3>
+                <div id="videoSrcBlk"></div>
+                
+                <br />
+                <strong>Connected users:</strong>
+                <div id="otherClients"></div>
+              </div>
+              <div id="videos">
+                <h3>Local media streams</h3>
+                <div autoplay="autoplay" id="localVideos"></div>
+                <h3>Remote media streams</h3>
+                <div autoplay="autoplay" id="remoteVideos"></div>
+                <div id="acceptCallBox"> <!-- Should be initially hidden using CSS -->
+                  <div id="acceptCallLabel"></div>
+                  <button id="callAcceptButton" >Accept</button> <button id="callRejectButton">Reject</button>
+                </div>
+              </div>
+            </div>
+      </body>
+    </html>
