@@ -2,6 +2,37 @@
 ### Engenharia de Telecomunicações
 > Repositório destinado para projetos envolvendo a disciplina de SMU29006
 
+#### Sinalização do WebRTC
+
+| Data |
+|---|
+| → 2probe | 
+| ← 3probe | 
+| → 421["easyrtcCmd",{"msgType":"stillAlive","msgData":{}}] | 
+| ← 431[{"msgType":"ack"}] |
+| → 422["easyrtcCmd",{"msgType":"setRoomApiField","msgData":{"setRoomApiField":{"roomName":"default","field":{"mediaIds":{"fieldName":"mediaIds","fieldValue":{}}}}}}] |
+| ← 432[{"msgType":"roomData","msgData":{"roomData":{"default":{"roomName":"default","roomStatus":"update","clientListDelta":{"updateClient":{"TxA1sCpvXBsJNJ3J":{"easyrtcid":"TxA1sCpvXBsJNJ3J","roomJoinTime":1574791029318,"presence":{"show":"chat","status":null},"apiField":{"mediaIds":{"fieldName":"mediaIds","fieldValue":{}}}}}}}}}}] |
+| → 423["easyrtcCmd",{"msgType":"stillAlive","msgData":{}}] |
+| ← 433[{"msgType":"ack"}] |
+| → 2 |
+| ← 3 |
+| → 424["easyrtcCmd",{"msgType":"stillAlive","msgData":{}}] |
+| ← 434[{"msgType":"ack"}] |
+| → 2 |
+| ← 3 |
+| ··· |
+
+| Data |
+|---|
+|`json`                         |
+|`[[`                           |
+|`  "easyrtcCmd",`              |
+|`  {`                          |
+|`    "msgType": "stillAlive",` |
+|`    "msgData": {}`            |
+|`  }`                          |
+|`]`                            |
+
 #### Cabeçalhos do WebRTC 
 
 ##### Requisição
@@ -47,7 +78,7 @@ Upgrade: websocket
 ```
 
 #### Análise no navegador
-##### SDP local (Resposta)
+##### SDP (Protocolo de Descrição da Sessão) local (Resposta)
 ```
 v=0
 o=mozilla...THIS_IS_SDPARTA-70.0.1 3664883122906395129 0 IN IP4 0.0.0.0
@@ -92,7 +123,7 @@ a=ssrc:3248660371 cname:{78aac3a2-fbc3-48f0-99b0-80d641a054f2}
  - PCMU à 8000 Hz
  - PCMA à 8000 Hz
 
-##### SDP Remoto (Oferta)
+##### SDP (Protocolo de Descrição da Sessão) Remoto (Oferta)
 ```
 v=0
 o=- 8894621801134890394 2 IN IP4 127.0.0.1
