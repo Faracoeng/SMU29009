@@ -24,9 +24,9 @@
 
 | Data |
 
-|Candidato local |	Candidato remoto |	ID do componente |	Estado ICE |	Prioridade |	Nomeado |	Selecionado |	Bytes enviados |	Bytes recebidos |
+|Candidato local |	Candidato remoto |	ID do componente |	Estado ICE |	Prioridade |	
 |---|---|---|---|---|---|---|---|---|
-|191.36.15.49:51149/udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	|succeeded |	9114723795305512000 |	true |	true |	84102 |	195032 |
+|191.36.15.49:51149/udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	|succeeded |	 
 
 #### Cabeçalhos do WebRTC 
 
