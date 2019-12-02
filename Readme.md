@@ -37,6 +37,8 @@ Após o estabelecimento, ocorrem, repedidamente em curtos intervalos, testes de 
 | [<br>  "easyrtcCmd",<br>  {<br>    "msgType": "setRoomApiField",<br>    "msgData": {<br>      "<tab> setRoomApiField": {<br>        "roomName": "default",<br>        "field": {<br>          "mediaIds": {<br>            "fieldName": "mediaIds",<br>            "fieldValue": {}<br>          }<br>        }<br>      }<br>    }<br>  }<br>] | [<br>  {<br>    "msgType": "roomData",<br>    "msgData": {<br>      "roomData": {<br>        "default": {<br>          "roomName": "default",<br>          "roomStatus": "update",<br>          "clientListDelta": {<br>            "updateClient": {<br>              "TxA1sCpvXBsJNJ3J": {<br>                "easyrtcid": "TxA1sCpvXBsJNJ3J",<br>                "roomJoinTime": 1574791029318,<br>                "presence": {<br>                  "show": "chat",<br>                  "status": null<br>                },<br>                "apiField": {<br>                  "mediaIds": {<br>                    "fieldName": "mediaIds",<br>                    "fieldValue": {}<br>                  }<br>                }<br>              }<br>            }<br>          }<br>        }<br>      }<br>    }<br>  }<br>] |
          
 
+Na tabela acima esta destacada a etapa do estabelecimento da conexão entre as partes.
+
 #### Cabeçalhos do WebRTC 
 
 ##### Requisição
