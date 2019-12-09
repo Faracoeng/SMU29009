@@ -1,7 +1,8 @@
 ## Sistemas de Multimídia
 ### Engenharia de Telecomunicações
 > Repositório destinado para o projeto final da disciplina de SMU29009
-#### Cenário
+
+#### Cenário geral
 
 Há um servidor WebRTC cuja função é estabelecer conferência entre duas ou mais partes através de uma seção pré estabelecida.
 O princípio de execução desde projeto foi baseado na implementação realizada pelo EasyRTC. Os tipos de mídia oferecidas nessa aplicação são:
@@ -15,6 +16,10 @@ O princípio de execução desde projeto foi baseado na implementação realizad
 **Usuário 2**: Celular utilizando WIFI **IP**: 191.36.10.22
 
 **Navegador utilizado**: Google Chrome
+
+#### Conteúdo de análise:
+
+Será analisado neste cenário, uma comunicação multimídia entre **usuário 1** e **usuário 2**.  
 
 #### Sinalização do WebRTC
 
