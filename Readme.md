@@ -9,7 +9,7 @@ O princípio de execução desde projeto foi baseado na implementação realizad
 * Vídeo;
 ##### **Cenário de análise**
 
-##### Partes envolvidas:
+#### Partes envolvidas:
 **Usuário 1**: Desktop com acesso a internet **IP**:191.36.15.45
 
 **Usuário 2**: Celular utilizando WIFI **IP**: 191.36.10.22
