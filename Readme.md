@@ -7,11 +7,11 @@ Há um servidor WebRTC cuja função é estabelecer conferência entre duas ou m
 O princípio de execução desde projeto foi baseado na implementação realizada pelo EasyRTC. Os tipos de mídia oferecidas nessa aplicação são:
 * Áudio;
 * Vídeo;
-##### Cenário de análise
+##### **Cenário de análise**
 
-###### Partes envolvidas:
-
+##### Partes envolvidas:
 **Usuário 1**: Desktop com acesso a internet **IP**:191.36.15.45
+
 **Usuário 2**: Celular utilizando WIFI **IP**: 191.36.10.22
 
 **Navegador utilizado**: Google Chrome
