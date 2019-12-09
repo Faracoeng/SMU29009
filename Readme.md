@@ -1,6 +1,6 @@
 ## Sistemas de Multimídia
 ### Engenharia de Telecomunicações
-> Repositório destinado para o projeto final da disciplina de SMU29006
+> Repositório destinado para o projeto final da disciplina de SMU29009
 #### Cenário
 
 Há um servidor WebRTC cuja função é estabelecer conferência entre duas ou mais partes através de uma seção pré estabelecida.
