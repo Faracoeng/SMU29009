@@ -47,10 +47,16 @@ Confirmada a presença, outra mensagem "msgType" é enviada, desta vez contendo 
 Outro campo ("field") é especificado "mediaIds" contendo os campos "fieldName" com atributo "mediaIds" e "fieldValue". O atributo "mediaIds" retorna a identificação das mídias trocadas para início da troca das mesmas. O campo "easyrtcid" traz  a identificação da sessão.
 Após o estabelecimento, ocorrem, repetidamente em curtos intervalos, testes de presença.
 
-O parâmetro **easyrtcCmd** é utilizado pelo socket.io para enviar e receber os comandos de sinalização.
+O parâmetro **easyrtcCmd** é utilizado pelo socket.io para enviar e receber os comandos de sinalização. 
 Do lado do servidor, a menos que seja especificado, as mensagens enviadas retornarão com **ack** ou mensagem de **erro**.
 Há o **msgType**, que são as mensagens enviadas entre os clientes e que contém os parâmetros requisitado por cada cliente.
+Há também o **msgData** que contém as informações solicitadas pelo **msgType**.
+
 Inicialmente, temos o *msgType* do tipo **candidate**. É uma sinalização do WebRTC. E envia os canditatos de ICE para o estabelecimento da conexão. Tanto a origem, quanto o destino, devem estar *online*, autenticados e na mesma sessão. Os campos deste tipo de mensagem são: *targetEasyrtcid* (exigido, pois é a identificação da da sessão), e *msgData* (exigido pois é o contéudo da resposta da mensagem).
+
+Para iniciar o estabelecimento da conexão, utiliza-se o *msgType* *offer*, que contém os campos: *targetEasyrtcid*, que é o identificador único do destino e o *msgData* que contém o SDP do usuário que iniciou a comunicação. Caso tudo ocorra bem, é recebido um *ack* do destino. 
+Em seguida, após o sucesso do passo anterior, é recebido um *msgType* *answer* que contém o os campos: *targetEasyrtcid*, que é o identificador único do destino e o *msgData* que contém o SDP do usuário alvo da comunicação. Caso tudo ocorra bem, é recebido um *ack* do destino.
+
 
 
 | 421                                                                                                                                                                                                                                                                                                                                       | 431                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
