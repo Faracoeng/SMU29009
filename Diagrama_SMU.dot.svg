@@ -9,7 +9,7 @@
 <g id="graph0" class="graph" transform="scale(1.3111 1.3111) rotate(0) translate(4 140)">
 <title>G</title>
 <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-140 435.3255,-140 435.3255,4 -4,4"/>
-<text text-anchor="middle" x="215.6627" y="-105" font-family="Times,serif" font-size="30.00" fill="#000000">Diagrama de Sinalização do easyRTC</text>
+<text text-anchor="middle" x="215.6627" y="-105" font-family="Times,serif" font-size="30.00" fill="#000000">Diagrama Sinalização easyRTC</text>
 <!-- CANDIDATE -->
 <g id="node1" class="node">
 <title>CANDIDATE</title>
