@@ -144,40 +144,94 @@ Upgrade: websocket
 ##### SDP (Protocolo de Descrição da Sessão) local (Resposta)
 ```
 v=0
-o=mozilla...THIS_IS_SDPARTA-70.0.1 3664883122906395129 0 IN IP4 0.0.0.0
+o=mozilla...THIS_IS_SDPARTA-71.0 318964658487024909 0 IN IP4 0.0.0.0
 s=-
 t=0 0
 a=sendrecv
-a=fingerprint:sha-256 B9:4E:C2:7D:55:8A:2C:77:F6:99:42:36:D4:2D:5A:FE:7D:14:85:3A:5A:DE:75:1E:62:05:2A:2F:74:A3:FB:F8
-a=group:BUNDLE 0
+a=fingerprint:sha-256 C1:13:4A:76:73:6B:6A:82:DD:13:D0:62:48:DB:12:CD:BE:E1:F4:9C:A3:2F:1C:38:D4:56:EE:5F:23:CC:F4:2D
+a=group:BUNDLE 0 1
 a=ice-options:trickle
 a=msid-semantic:WMS *
-m=audio 34052 UDP/TLS/RTP/SAVPF 111 9 0 8 126
-c=IN IP4 191.36.15.105
-a=candidate:0 1 UDP 2122252543 10.10.10.113 34052 typ host
-a=candidate:6 1 UDP 2122187007 191.36.15.49 41321 typ host
-a=candidate:12 1 TCP 2105524479 10.10.10.113 9 typ host tcptype active
-a=candidate:13 1 TCP 2105458943 191.36.15.49 9 typ host tcptype active
-a=candidate:1 1 UDP 1686052863 191.36.15.105 34052 typ srflx raddr 10.10.10.113 rport 34052
+m=audio 49625 UDP/TLS/RTP/SAVPF 109 9 0 8 101
+c=IN IP4 191.36.15.4
+a=candidate:0 1 UDP 2122187007 191.36.15.4 35212 typ host
+a=candidate:6 1 UDP 2122252543 172.17.0.1 49625 typ host
+a=candidate:12 1 TCP 2105458943 191.36.15.4 9 typ host tcptype active
+a=candidate:13 1 TCP 2105524479 172.17.0.1 9 typ host tcptype active
+a=candidate:0 2 UDP 2122187006 191.36.15.4 38945 typ host
+a=candidate:6 2 UDP 2122252542 172.17.0.1 56840 typ host
+a=candidate:12 2 TCP 2105458942 191.36.15.4 9 typ host tcptype active
+a=candidate:13 2 TCP 2105524478 172.17.0.1 9 typ host tcptype active
+a=candidate:9 1 UDP 1686052351 191.36.15.4 49625 typ srflx raddr 172.17.0.1 rport 49625
+a=candidate:9 2 UDP 1686052350 191.36.15.4 56840 typ srflx raddr 172.17.0.1 rport 56840
 a=sendrecv
 a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
-a=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid
-a=fmtp:111 maxplaybackrate=48000;stereo=1;useinbandfec=1
-a=fmtp:126 0-15
-a=ice-pwd:a5a454dada29a282e703fa64f2895f8d
-a=ice-ufrag:78d6ce02
+a=extmap:2/recvonly urn:ietf:params:rtp-hdrext:csrc-audio-level
+a=extmap:3 urn:ietf:params:rtp-hdrext:sdes:mid
+a=fmtp:109 maxplaybackrate=48000;stereo=1;useinbandfec=1
+a=fmtp:101 0-15
+a=ice-pwd:5fd23586350ecb1d8ed28914114b6943
+a=ice-ufrag:c7321b41
 a=mid:0
-a=msid:{f504e355-1df2-4715-add4-86a379b6bc43} {20c6777e-2898-4aec-b399-45d7bf29c8c8}
+a=msid:{3ba5b148-206f-4c1c-afc8-6f10a7e7f609} {6dc9ae20-2059-406b-9edd-6d98a4efb87e}
+a=rtcp:56840 IN IP4 172.17.0.1
 a=rtcp-mux
-a=rtpmap:111 opus/48000/2
+a=rtpmap:109 opus/48000/2
 a=rtpmap:9 G722/8000/1
 a=rtpmap:0 PCMU/8000
 a=rtpmap:8 PCMA/8000
-a=rtpmap:126 telephone-event/8000
-a=setup:active
-a=ssrc:3248660371 cname:{78aac3a2-fbc3-48f0-99b0-80d641a054f2}
-
+a=rtpmap:101 telephone-event/8000
+a=setup:actpass
+a=ssrc:2427354511 cname:{a7038705-9ea6-45dd-a083-1ec23e280e0b}
+m=video 49625 UDP/TLS/RTP/SAVPF 120 121 126 97
+c=IN IP4 191.36.15.4
+a=candidate:0 1 UDP 2122187007 191.36.15.4 37546 typ host
+a=candidate:6 1 UDP 2122252543 172.17.0.1 33842 typ host
+a=candidate:12 1 TCP 2105458943 191.36.15.4 9 typ host tcptype active
+a=candidate:13 1 TCP 2105524479 172.17.0.1 9 typ host tcptype active
+a=candidate:0 2 UDP 2122187006 191.36.15.4 57314 typ host
+a=candidate:6 2 UDP 2122252542 172.17.0.1 45017 typ host
+a=candidate:12 2 TCP 2105458942 191.36.15.4 9 typ host tcptype active
+a=candidate:13 2 TCP 2105524478 172.17.0.1 9 typ host tcptype active
+a=sendrecv
+a=extmap:3 urn:ietf:params:rtp-hdrext:sdes:mid
+a=extmap:4 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=extmap:5 urn:ietf:params:rtp-hdrext:toffset
+a=extmap:6/recvonly http://www.webrtc.org/experiments/rtp-hdrext/playout-delay
+a=fmtp:126 profile-level-id=42e01f;level-asymmetry-allowed=1;packetization-mode=1
+a=fmtp:97 profile-level-id=42e01f;level-asymmetry-allowed=1
+a=fmtp:120 max-fs=12288;max-fr=60
+a=fmtp:121 max-fs=12288;max-fr=60
+a=ice-pwd:5fd23586350ecb1d8ed28914114b6943
+a=ice-ufrag:c7321b41
+a=mid:1
+a=msid:{3ba5b148-206f-4c1c-afc8-6f10a7e7f609} {c60af14f-2a57-45a6-9570-195d14a7fdab}
+a=rtcp:45017 IN IP4 172.17.0.1
+a=rtcp-fb:120 nack
+a=rtcp-fb:120 nack pli
+a=rtcp-fb:120 ccm fir
+a=rtcp-fb:120 goog-remb
+a=rtcp-fb:121 nack
+a=rtcp-fb:121 nack pli
+a=rtcp-fb:121 ccm fir
+a=rtcp-fb:121 goog-remb
+a=rtcp-fb:126 nack
+a=rtcp-fb:126 nack pli
+a=rtcp-fb:126 ccm fir
+a=rtcp-fb:126 goog-remb
+a=rtcp-fb:97 nack
+a=rtcp-fb:97 nack pli
+a=rtcp-fb:97 ccm fir
+a=rtcp-fb:97 goog-remb
+a=rtcp-mux
+a=rtpmap:120 VP8/90000
+a=rtpmap:121 VP9/90000
+a=rtpmap:126 H264/90000
+a=rtpmap:97 H264/90000
+a=setup:actpass
+a=ssrc:3577008086 cname:{a7038705-9ea6-45dd-a083-1ec23e280e0b}
 ```
+
 ##### Codec ofertados na resposta
 
  - opus à 48000 Hz, com 2 canais
@@ -189,55 +243,88 @@ a=ssrc:3248660371 cname:{78aac3a2-fbc3-48f0-99b0-80d641a054f2}
 ##### SDP (Protocolo de Descrição da Sessão) Remoto (Oferta)
 ```
 v=0
-o=- 8894621801134890394 2 IN IP4 127.0.0.1
+o=- 7858975486700602011 2 IN IP4 127.0.0.1
 s=-
 t=0 0
 a=sendrecv
-a=group:BUNDLE 0
-a=msid-semantic:WMS  {
-    "msgType": "ack"
-  }
-] SW1LDGJjg94uffeKZLWXxB1NR01hwDH5vZ8M
-m=audio 9 UDP/TLS/RTP/SAVPF 111 103 9 0 8 105 13 110 113 126
+a=group:BUNDLE 0 1
+a=msid-semantic:WMS 6CgZG4eSFUCv3SUbVWUWCBvQ8RtwIhD3WVhR
+m=audio 9 UDP/TLS/RTP/SAVPF 109 9 0 8 101
 c=IN IP4 0.0.0.0
+a=candidate:1108098214 1 udp 2122262783 2804:1454:1004:530:94c4:f03a:11c6:d414 48895 typ host generation 0 ufrag jjG4 network-id 2 network-cost 10
+a=candidate:2346220213 1 udp 2122194687 191.36.11.53 48612 typ host generation 0 ufrag jjG4 network-id 1 network-cost 10
 a=sendrecv
 a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
-a=extmap:2 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
-a=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01
-a=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid
-a=extmap:5 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id
-a=extmap:6 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id
-a=fingerprint:sha-256 B7:54:00:AA:6D:BC:63:97:91:82:77:A4:C0:4C:4A:16:0B:D2:19:5C:80:C5:B7:27:49:77:5C:C1:24:26:3A:3C
-a=fmtp:111 maxplaybackrate=0;stereo=0;useinbandfec=1
+a=extmap:3 urn:ietf:params:rtp-hdrext:sdes:mid
+a=fingerprint:sha-256 50:C2:27:D2:9D:BD:5B:83:A6:F4:79:11:20:CD:BC:8F:12:C7:EC:93:2D:7C:75:DB:00:88:29:7E:DD:AF:67:A2
+a=fmtp:109 maxplaybackrate=0;stereo=0;useinbandfec=1
 a=ice-options:trickle
-a=ice-pwd:15t33GicN6Qpn+vnO1G5UhLg
-a=ice-ufrag:RB9e
+a=ice-pwd:fAicE/AhqYBIOuqH2a0+sD6B
+a=ice-ufrag:jjG4
 a=mid:0
-a=msid:SW1LDGJjg94uffeKZLWXxB1NR01hwDH5vZ8M e6222780-8083-4796-8695-08dcfe31308b
+a=msid:6CgZG4eSFUCv3SUbVWUWCBvQ8RtwIhD3WVhR 4518f415-3d00-4a47-ba0a-aeaf47ae7ec3
 a=rtcp:9 IN IP4 0.0.0.0
 a=rtcp-mux
-a=rtpmap:111 opus/48000/2
-a=rtpmap:103 ISAC/16000/1
+a=rtpmap:109 opus/48000/2
 a=rtpmap:9 G722/8000/1
 a=rtpmap:0 PCMU/8000
 a=rtpmap:8 PCMA/8000
-a=rtpmap:105 CN/16000/1
-a=rtpmap:13 CN/8000/1
-a=rtpmap:110 telephone-event/48000
-a=rtpmap:113 telephone-event/16000
-a=rtpmap:126 telephone-event/8000
-a=setup:actpass
-a=ssrc:509559268 cname:7ODgOUg2dlVM7YZM
-a=ssrc:509559268 msid:SW1LDGJjg94uffeKZLWXxB1NR01hwDH5vZ8M e6222780-8083-4796-8695-08dcfe31308b
-a=ssrc:509559268 mslabel:SW1LDGJjg94uffeKZLWXxB1NR01hwDH5vZ8M
-a=ssrc:509559268 label:e6222780-8083-4796-8695-08dcfe31308b
+a=rtpmap:101 telephone-event/8000
+a=setup:active
+a=ssrc:3981974271 cname:N/AtXI3n9FOpW9an
+m=video 9 UDP/TLS/RTP/SAVPF 120 121 126
+c=IN IP4 0.0.0.0
+a=sendrecv
+a=extmap:5 urn:ietf:params:rtp-hdrext:toffset
+a=extmap:4 http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time
+a=extmap:6 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay
+a=extmap:3 urn:ietf:params:rtp-hdrext:sdes:mid
+a=fingerprint:sha-256 50:C2:27:D2:9D:BD:5B:83:A6:F4:79:11:20:CD:BC:8F:12:C7:EC:93:2D:7C:75:DB:00:88:29:7E:DD:AF:67:A2
+a=fmtp:126 profile-level-id=42e01f;level-asymmetry-allowed=1;packetization-mode=1
+a=ice-options:trickle
+a=ice-pwd:fAicE/AhqYBIOuqH2a0+sD6B
+a=ice-ufrag:jjG4
+a=mid:1
+a=msid:6CgZG4eSFUCv3SUbVWUWCBvQ8RtwIhD3WVhR 8decff6c-d9b4-427c-acea-ed7f55a615b7
+a=rtcp:9 IN IP4 0.0.0.0
+a=rtcp-fb:120 goog-remb
+a=rtcp-fb:120 ccm fir
+a=rtcp-fb:120 nack
+a=rtcp-fb:120 nack pli
+a=rtcp-fb:121 goog-remb
+a=rtcp-fb:121 ccm fir
+a=rtcp-fb:121 nack
+a=rtcp-fb:121 nack pli
+a=rtcp-fb:126 goog-remb
+a=rtcp-fb:126 ccm fir
+a=rtcp-fb:126 nack
+a=rtcp-fb:126 nack pli
+a=rtcp-mux
+a=rtpmap:120 VP8/90000
+a=rtpmap:121 VP9/90000
+a=rtpmap:126 H264/90000
+a=setup:active
+a=ssrc:4074892717 cname:N/AtXI3n9FOpW9an
 ```
 
 ##### Codec ofertados na Oferta
 
+**Vídeo:**
+
+ - VP8 à 90000 Hz
+ - VP9 à 90000 Hz
+ - H264 à 90000 Hz
+ 
+ **Áudio:**
+ 
  - opus à 48000 Hz, com 2 canais
  - ISAC à 16000 Hz, com 1 canal
- - G722/à 8000 Hz, com 1 canal
+ - G722 à 8000 Hz,a=rtpmap:120 VP8/90000
+
+a=rtpmap:121 VP9/90000
+
+a=rtpmap:126 H264/90000
+ com 1 canal
  - PCMU à 8000 Hz
  - PCMA à 8000 Hz
 
@@ -246,6 +333,11 @@ a=ssrc:509559268 label:e6222780-8083-4796-8695-08dcfe31308b
 
 |Candidato local |	Candidato remoto |	ID do componente |	Estado ICE |	Prioridade |	Nomeado |	Selecionado |	Bytes enviados |	Bytes recebidos |
 |---|---|---|---|---|---|---|---|---|
-|191.36.15.49:51149/udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	|succeeded |	9114723795305512000 |	true |	true |	84102 |	195032 |
+|191.36.15.49:51149/a=rtpmap:120 VP8/90000
+
+a=rtpmap:121 VP9/90000
+
+a=rtpmap:126 H264/90000
+udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	|succeeded |	9114723795305512000 |	true |	true |	84102 |	195032 |
 |10.10.10.113:37057/udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1 |	failed |	9114756780654461000 |	false |	false |	0 |	0 |
 |(redacted):37057/udp(prflx) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	| succeeded |	7962083765675376000 |	false |	false |	0 |	0 |
