@@ -75,8 +75,8 @@ digraph G {
 	fixedsize = true
 	splines = true
 
-	CANDIDATE -> OFFER //[label = "A = 1"] CASO QUEIRA COLOCAR UMA MENSAGEM
-	OFFER -> ANSWER // [label = "A = 0"]
+	CANDIDATE -> OFFER 
+	OFFER -> ANSWER 
   OFFER -> CANDIDATE [label = "ack"]
   ANSWER -> OFFER [label = "ack"]
   OFFER -> REJECT
