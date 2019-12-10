@@ -59,7 +59,7 @@ Em seguida, após o sucesso do passo anterior, é recebido um *msgType* *answer*
 
 Neste ponto, ambas as partes sabem da capacidade uma da outra em relação aos codecs de áudio e vídeo.
 
-!(Diagrama)[Diagrama_SMU.dot.svg]
+![Diagram](Diagrama_SMU.dot.svg)
 
 Digrama gerado através da linguagem DOT, segue abaxo o código:
 ```dot
