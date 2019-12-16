@@ -344,6 +344,7 @@ a=rtpmap:126 H264/90000
 
 #### Exemplo de comunicação observado através do about:config do Firefox
 
+
 |Candidato local |	Candidato remoto |	ID do componente |	Estado ICE |	Prioridade |	Nomeado |	Selecionado |	Bytes enviados |	Bytes recebidos |
 |---|---|---|---|---|---|---|---|---|
 |191.36.15.49:51149/a=rtpmap:120 VP8/90000
