@@ -65,7 +65,6 @@ Há também a mensagem de sinalização que encerra a conexão, o **hangup**. O 
 
 Durante a negociação e após o estabalecimento da conexão, o **msgType** **getIceConfig** é utilizado para obter a configuração de ICE mais recente, especialmente em conexões longas. Isso permite atulizar a lista de sevidores STUN e TURN.
 
-
 | 421                                                                                                                                                                                                                                                                                                                                       | 431                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [<br>  "easyrtcCmd",<br>  {<br>    "msgType": "stillAlive",<br>    "msgData": {}<br>  }<br>]                                                                                                                                                                                                                                              | [<br>  {<br>    "msgType": "ack"<br>  }<br>]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -337,7 +336,15 @@ a=ssrc:4074892717 cname:N/AtXI3n9FOpW9an
  - PCMA à 8000 Hz
 
 
+##### Modos de estabelecimento da conexão
+
+Existem duas formas de se estabelecer a conexão de troca de mídia entre os clientes:
+ - host: é uma conexão local e não utiliza o servidor STUN ou TURN
+ - srflx: estabele a troca de mídia utilizando servidores para relay (TURN). Ocorre quando o usuário está sob NAT.
+
 #### Exemplo de comunicação observado através do about:config do Firefox
+
+No exemplo abaixo há a troca de mídia no modo "host", ou seja, feito uma conexão local.
 
 |Candidato local |	Candidato remoto |	ID do componente |	Estado ICE |	Prioridade |	Nomeado |	Selecionado |	Bytes enviados |	Bytes recebidos |
 |---|---|---|---|---|---|---|---|---|
