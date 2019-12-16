@@ -330,9 +330,9 @@ a=ssrc:4074892717 cname:N/AtXI3n9FOpW9an
  
  **Áudio:**
  
- - opus à 48000 Hz
- - ISAC à 16000 Hz
- - G722 à 8000 Hz
+ - opus à 48000 Hz, com 2 canais
+ - ISAC à 16000 Hz, com 1 canal
+ - G722/à 8000 Hz, com 1 canal
  - PCMU à 8000 Hz
  - PCMA à 8000 Hz
 
@@ -341,11 +341,6 @@ a=ssrc:4074892717 cname:N/AtXI3n9FOpW9an
 
 |Candidato local |	Candidato remoto |	ID do componente |	Estado ICE |	Prioridade |	Nomeado |	Selecionado |	Bytes enviados |	Bytes recebidos |
 |---|---|---|---|---|---|---|---|---|
-|191.36.15.49:51149/a=rtpmap:120 VP8/90000
-
-a=rtpmap:121 VP9/90000
-
-a=rtpmap:126 H264/90000
-udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	|succeeded |	9114723795305512000 |	true |	true |	84102 |	195032 |
+|191.36.15.49:51149/udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	|succeeded |	9114723795305512000 |	true |	true |	84102 |	195032 |
 |10.10.10.113:37057/udp(host) [non-proxied] |	191.36.10.110:41725/udp(host) |	1 |	failed |	9114756780654461000 |	false |	false |	0 |	0 |
 |(redacted):37057/udp(prflx) [non-proxied] |	191.36.10.110:41725/udp(host) |	1	| succeeded |	7962083765675376000 |	false |	false |	0 |	0 |
