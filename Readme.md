@@ -330,14 +330,9 @@ a=ssrc:4074892717 cname:N/AtXI3n9FOpW9an
  
  **Áudio:**
  
- - opus à 48000 Hz, com 2 canais
- - ISAC à 16000 Hz, com 1 canal
- - G722 à 8000 Hz,a=rtpmap:120 VP8/90000
-
-a=rtpmap:121 VP9/90000
-
-a=rtpmap:126 H264/90000
- com 1 canal
+ - opus à 48000 Hz
+ - ISAC à 16000 Hz
+ - G722 à 8000 Hz
  - PCMU à 8000 Hz
  - PCMA à 8000 Hz
 
