@@ -239,7 +239,14 @@ a=ssrc:3577008086 cname:{a7038705-9ea6-45dd-a083-1ec23e280e0b}
 ```
 
 ##### Codec ofertados na resposta
+**Vídeo:**
 
+ - VP8 à 90000 Hz
+ - VP9 à 90000 Hz
+ - H264 à 90000 Hz
+ 
+ **Áudio**
+ 
  - opus à 48000 Hz, com 2 canais
  - ISAC à 16000 Hz, com 1 canal
  - G722/à 8000 Hz, com 1 canal
